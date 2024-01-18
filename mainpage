@@ -21,9 +21,9 @@
         <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="burger menu"><!--This is the source image for the burger menu-->
     </header>
     <script>
-        function burgerfunc(){
-            var nav = document.getElementById("mobilelistNav");
-            if (nav.style.display === "flex") {
+        function burgerfunc(){//this is the burger menu function to make the mobile list nave show and hide when the button is clicked 
+            var nav = document.getElementById("mobilelistNav");// sets a variable as nav for the item in the html 
+            if (nav.style.display === "flex") {// this if statement checks if it is already shown or hidden then inverts
                 nav.style.display = "none";
             } else   {
                 nav.style.display = "flex";
