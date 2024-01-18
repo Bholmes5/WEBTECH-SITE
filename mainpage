@@ -34,19 +34,19 @@
         <li ><a class="mobilelist" href="products.html"> Products</a> </li>
         <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
     </ul>
-<main>
-    <h1 >Where opportunity creates success</h1>
+<main> 
+    <h1 >Where opportunity creates success</h1><!--This heading is using a h1 tag to make accessibility easier-->
     <p class="mainin">Every student at The University of Central Lancashire is automatically a member of the Students' Union.We're here to make life better for students - inspiring you to succeed and achive your goals. </p>
     <p class="mainin">Everything you need to know about UCLan Students' Union. Your membership starts here. </p>
-    <h2 class="headings">Together</h2>
+    <h2 class="headings">Together</h2><!--This heading is using a h2 tag to make accessibility easier-->
     <video class="vid1"  controls>
     <source src="video.mp4" type="video/mp4">
     </video>
-    <h2 class="headings">Join our global community</h2>
+    <h2 class="headings">Join our global community</h2><!--This heading is using a h2 tag to make accessibility easier-->
     <iframe class="vid2"  src = "https://www.youtube.com/embed/EI_lco-qdw8" ></iframe>
 </main>
     <footer>
-        <div class="footer-grid">
+        <div class="footer-grid"><!--A grid is used for allow-->
             <div class="grid-item"><h1>Links</h1><p>Student Union</p></div>
             <div class="grid-item"><h1>Contact</h1><p>Email:suinformation@uclan.ac.uk Phone: 01772893000</p></div>
             <div class="grid-item"><h1>Location</h1><p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
