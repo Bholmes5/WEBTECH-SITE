@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="MainStyle.css" /> <!-- link to the stylesheet -->
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+   <title>Student Shop Home Page</title>
 </head>
 <body>
     <header> <!-- header bar that is going to appear at the top of the screen -->
