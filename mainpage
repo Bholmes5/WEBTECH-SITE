@@ -31,7 +31,7 @@
             
             }
             )</script>
-    <
+
     <ul class="mobilelistNav">
         <li class="mobilelist"><a href="Home.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
         <li class="mobilelist"><a href="Products.html"> Products</a> </li>
