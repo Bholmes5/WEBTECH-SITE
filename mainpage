@@ -31,13 +31,23 @@
             
             }
             )</script>
-
+    <
     <ul class="mobilelistNav">
         <li class="mobilelist"><a href="Home.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
         <li class="mobilelist"><a href="Products.html"> Products</a> </li>
         <li class="mobilelist"><a href="Cart.html"> Cart</a> </li>   
             
     </ul>
+    <script>
+        function burgerfunc(){
+        var nav = document.getElementById("mobilelistNav");
+        if (nav.style.display === "flex") {
+            nav.style.display = "none";
+    
+        } else   {
+            nav.style.display = "flex";
+  }
+    </script>
 <main>
     <h1>Where opportunity creates success</h1>
     <p>Every student at The University of Central Lancashire is automatically a member of the Students' Union.We're here to make life better for students - inspiring you to succeed and achive your goals. </p>
