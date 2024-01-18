@@ -10,7 +10,7 @@
     <header> <!-- header bar that is going to appear at the top of the screen -->
         <div class="logo"><img width="80%"  src="logo.svg" alt="UCLan logo" ></div>
         <div class="Title1">Student shop</div>
-        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
+        
         <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
             
             <ul class="desktoplistnav">
@@ -20,6 +20,7 @@
                 
             </ul>
         </nav> 
+        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
     </header>
 
     <script>
