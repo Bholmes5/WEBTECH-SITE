@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="MainStyle.css" > <!-- link to the stylesheet --> 
-    <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="MainStyle.css" > <!-- link to the indervidual stylesheet --> 
+    <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the general stylesheet -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student Shop Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Student Shop Home Page</title><!-- This adds a title to the tab/page -->
 </head>
-<body>
+<body><!-- applys the body tag -->
     <header> <!-- header bar that is going to appear at the top of the screen -->
-        <div class="logo"><img id="logo" src="logo.svg" alt="UCLan logo" ></div>
-        <div class="title1">Student shop</div>
-        <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
-            <ul class="desktoplistnav">
+        <div class="logo"><img id="logo" src="logo.svg" alt="UCLan logo" ></div><!-- This adds a logo into the header with a alt tag of Uclan logo -->
+        <div class="title1">Student shop</div><!-- This adds a title to the page -->
+        <nav> <!-- the navigation links are within this for accesibility purposes -->
+            <ul class="desktoplistnav"><!-- This makes a un-orderd list tag for the desktop list navigation -->
                 <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
                 <li class="desktoplist"><a href="products.html"> Products</a> </li>
                 <li class="desktoplist"><a href="Cart.html"> Cart</a> </li>    
             </ul>
         </nav> 
-        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
+        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="burger menu"><!--This is the source image for the burger menu-->
     </header>
     <script>
         function burgerfunc(){
@@ -29,20 +29,20 @@
                 nav.style.display = "flex";
       }
         }</script>
-    <ul id="mobilelistNav">
+    <ul id="mobilelistNav"><!-- This makes a un-orderd list tag for the mobile list navigation -->
         <li ><a class="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
         <li ><a class="mobilelist" href="products.html"> Products</a> </li>
         <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
     </ul>
 <main>
-    <h1 class="headings">Where opportunity creates success</h1>
-    <p>Every student at The University of Central Lancashire is automatically a member of the Students' Union.We're here to make life better for students - inspiring you to succeed and achive your goals. </p>
-    <p>Everything you need to know about UCLan Students' Union. Your membership starts here. </p>
+    <h1 >Where opportunity creates success</h1>
+    <p class="mainin">Every student at The University of Central Lancashire is automatically a member of the Students' Union.We're here to make life better for students - inspiring you to succeed and achive your goals. </p>
+    <p class="mainin">Everything you need to know about UCLan Students' Union. Your membership starts here. </p>
     <h2 class="headings">Together</h2>
     <video class="vid1"  controls>
     <source src="video.mp4" type="video/mp4">
     </video>
-    <h2>Join our global community</h2>
+    <h2 class="headings">Join our global community</h2>
     <iframe class="vid2"  src = "https://www.youtube.com/embed/EI_lco-qdw8" ></iframe>
 </main>
     <footer>
