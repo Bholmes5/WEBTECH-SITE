@@ -2,13 +2,11 @@
     
     font-family: 'sans-serif';
 }
-
 body{    
     margin: 0px;
     padding: 0px;
 }
 header {
-
     width: 100%;
     background-color: #BE1622;
     display: flex;
@@ -57,9 +55,8 @@ header {
     
         position: relative;
         right: 0%;
-        
         cursor: pointer;
-        margin-left: 40%;
+        margin-left: auto;
     }
         
 
@@ -67,9 +64,7 @@ header {
    
 
 }
-
-.mobilelistNav{
-        
+.mobilelistNav{ 
     background-color: #34516C;
     width: 100%;
     margin: 0;
@@ -77,10 +72,7 @@ header {
     flex-direction: row;
     list-style: none;
     padding: 0;
-    
-
 }
-
 .mobilelist a{
         
     text-decoration: none;
@@ -92,26 +84,28 @@ header {
     font-size: 1.3em;
     text-align: right;
 }
-main{
-    allign-items:center;
-}
-
-.item-name{
-    color:orange;
-    font-size: 130%;
-}
-.item-disc{
-    font-size: 80%;
-}
-.buybutton{
-    align-self: center;
-}
-.shop-item{
-    width: 80%;
-    height: 100%;
+#item{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
     background-color: e8e8e8;
     align-content: center;
     border:  solid #C7CBDA;
+}
+#itemimage{
+    margin-left: auto;
+    margin: auto;
+    width: 60%;
+}
+#itemname{
+    color:orange;
+    font-size: 130%;
+}
+#itemdisc{
+    font-size: 80%;
 }
 
 footer{
@@ -138,7 +132,6 @@ footer{
 .mobilelist a{
     display: none;
 }
-
 @media (max-width : 850px) {
     .desktoplist{
         display: none;
