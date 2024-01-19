@@ -14,11 +14,11 @@ header {
     flex-direction: row;
     padding: 0 0 0;
 
-    .Title1 {
+    .title1 {
         color: white;
         font-weight: bold;
         text-align: left;
-        font-size: 150%;
+        font-size: 180%;
         margin-top: 1.1em;
     }
 
@@ -76,11 +76,8 @@ header {
     list-style: none;
     padding: 0;
     
-
-}
-
 .mobilelist a{
-        
+    display: none; 
     text-decoration: none;
     color: ghostwhite;
     &:hover {
@@ -90,21 +87,27 @@ header {
     font-size: 1.3em;
     text-align: right;
 }
-main{
-    padding-bottom: 5em;
-}
-.pagecontainer{
-    position: relative;
-  min-height: 100vh;
+
 }
 
+.main{
+    padding-bottom: 5%;
+    min-height: 100%;
+}
+
+
 .itemnav{
+    margin-left: 21%;
     padding:0;
     margin-right: 0.5em;
-    margin-top:0.2em ;
+    margin-top:1em ;
     display: flex;
     flex-direction: row;
+    .pro{
+    list-style: none;
     text-decoration: none;
+    font-size: 1.1em;
+    margin: 1em 1em 1em;
 }
 .select{
     &:hover {
@@ -116,69 +119,126 @@ main{
     margin: 1em 1em 1em;
     
 }
+}
+
+#scrolltop {
+    position:fixed;
+    left:10px;
+    bottom: 500px;
+    width : 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e67239;
+    cursor: pointer;
+}
 #itemsgrid{
     align-self: center;
     display: grid;
     grid-template-columns:auto auto auto;
-    padding:5% 22% 0em;
-    grid-gap:1%;
-    margin:none;
-    margin-bottom: 5em;
+    padding:0% 22% 0em;
+    column-gap: 0.25%;
+    row-gap: 2em;
+    #eachitem{
+        padding-right: 0;
+        width: 80%;
+        height: 100%;
+        background-color: e8e8e8;
+        align-content: center;
+        border:  solid #C7CBDA;
+    }
 
-}
-#eachitem{
-    
-    width: 80%;
-    height: 100%;
-    background-color: e8e8e8;
-    align-content: center;
-    border:  solid #C7CBDA;
-}
-#itemname{
-    color:orange;
-    font-size: 130%;
-}
-#itemdisc{
-    font-size: 80%;
-}
+    #itemname{
+        color:orange;
+        font-size: 150%;
+    }
+    #itemdisc{
+        font-size: 120%;
+    }
 
-.buybutton{
-    align-self: center;
-}
+    .buybutton{
+        align-self: center;
+    }
+    }
+     
+
+
 
 footer{
-    position: sticky; 
+    margin-top: 2em;
+    bottom: 0%; 
     color: white;
     background-color: #007FB0;
+        .footer-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #007FB0;
+        
+    .grid-item{
+        align-items: space-evenly;
+        
+        margin-right: 30%;
+    }
+    .grid-item p{
+        font-size: 90%;
+    }
+    .grid-item h1{
+        font-size: 100%;
+    }
+    }
   }
-.footer-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    
-}
-.grid-item{
-    align-items: space-evenly;
-    
-    margin-right: 30%;
-}
-.grid-item p{
-    font-size: 90%;
-}
-.grid-item h1{
-    font-size: 100%;
-}
-.mobilelist a{ 
-    display: none;
-}
+
 
 @media (max-width : 850px) {
     .desktoplist{
         display: none;
     }
-    
+    #itemsgrid{
+        grid-template-columns:auto auto ;
+        padding:0% 11% 0em;
+        
+        
+    }
+    .itemnav{
+        margin-left: 2%;}
+        
   }
-  @media (min-width : 850px) {
+@media (max-width : 600px) {
+    .title1{
+        font-size: smaller;
+    }
+    #itemname{
+        color:orange;
+        font-size: 100%;
+    }
+    #itemdisc{
+        font-size: 80%;
+    }
     
+        
+  }
+  @media (max-width : 410px) {
+    .title1{
+        font-size: smaller;
+    }
+    #itemname{
+        color:orange;
+        font-size: 100%;
+    }
+    #itemdisc{
+        font-size: 80%;
+    }
+    #itemsgrid{
+        grid-template-columns:auto ;
+        padding-left: 20% ;
+        
+        
+    }
+    
+        
+  }
+@media (min-width : 851px) {
+    
+
    .mobile-menu{
     display:none;
     }
