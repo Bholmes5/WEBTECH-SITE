@@ -1,13 +1,13 @@
     *{
-        font-family: sans-serif;
+        font-family: sans-serif;/*This sets the font as sans serif for all text*/
     }
     body{    
-        margin: 0px;
+        margin: 0px;/*this removes any margins or paddings*/
         padding: 0px;
     }
     header {
 
-        width: 100%;
+        width: 100%;/*This sets the width background clour and posisions it in a row with no padding*/
         background-color: #BE1622;
         display: flex;
         flex-direction: row;
@@ -69,7 +69,7 @@
     width: 100%;
     margin: 0;
     display: none;
-    flex-direction: row;
+    flex-direction: row;/*This puts it in a row with no list style */
     list-style: none;
     padding: 0;}
     
@@ -83,14 +83,13 @@
     text-align: right;
 }
 
-.mobilelist:hover {
+.mobilelist:hover {/*When the cursour hovers over this item then it will become bold*/
         font-weight: bold;
     }
 
 footer {
     display: flex;
     margin-top: 1em;
-    
     bottom: 0;
     width: 100%;
     color: white;
@@ -103,25 +102,25 @@ footer {
     margin-right: auto;
     display: grid;
     grid-template-columns: auto auto auto;/*This makes it show in a row of three*/
-    justify-content: space-evenly;
+    justify-content: space-evenly;/*This evenly spaces the content*/
   }
 
 .grid-item{
-    justify-content: space-evenly;
+    justify-content: space-evenly;/*This evenly spaces the content*/
     margin-right: 30%;
 }
   
-@media (max-width : 850px) {
+@media (max-width : 850px) {/*the media tag can be used to ajust details depending on the size of the view width */
     .desktoplist{
         display: none;
     }  
   }
-  @media (min-width : 600px) {
+  @media (min-width : 600px) {/*the media tag can be used to ajust details depending on the size of the view width */
     .title1{
         font-size: 25px; 
     }  
   }
-@media (max-width : 600px) {
+@media (max-width : 600px) {/*the media tag can be used to ajust details depending on the size of the view width */
     .title1{
         font-size: 20px;  
     }
@@ -129,7 +128,7 @@ footer {
         grid-template-columns: auto auto;/*when it gets smaller it will remove a row to look better on smaller devices */
     }   
   }
-  @media (min-width : 440px){
+  @media (min-width : 440px){/*the media tag can be used to ajust details depending on the size of the view width */
     .grid-item p{
         font-size: 80%;
     }
@@ -137,7 +136,7 @@ footer {
         font-size: 100%;
     }
   }
-  @media (max-width : 440px) {
+  @media (max-width : 440px) {/*the media tag can be used to ajust details depending on the size of the view width */
     .logo{
         width: 60%;
     }
@@ -166,7 +165,7 @@ footer {
         font-size: 90%;
     }
   }
-@media (min-width : 851px) {
+@media (min-width : 851px) {/*the media tag can be used to ajust details depending on the size of the view width */
    .mobile-menu{
     display:none;
     }
