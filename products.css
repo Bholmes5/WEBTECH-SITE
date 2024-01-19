@@ -18,8 +18,8 @@ header {
         color: white;
         font-weight: bold;
         text-align: left;
-        font-size: 180%;
         margin-top: 1.1em;
+        
     }
 
     .desktoplistNav{
@@ -56,7 +56,7 @@ header {
     
         position: relative;
         right: 0%;
-        
+        margin-right:0.5em;
         cursor: pointer;
         margin-left: auto;
     }
@@ -66,18 +66,18 @@ header {
    
 
 }
-.mobilelistNav{
+#mobilelistNav{
         
     background-color: #34516C;
     width: 100%;
     margin: 0;
-    display: flex;
+    display: none;
     flex-direction: row;
     list-style: none;
     padding: 0;
     
-.mobilelist a{
-    display: none; 
+#mobilelist{
+    
     text-decoration: none;
     color: ghostwhite;
     &:hover {
@@ -202,26 +202,34 @@ footer{
         margin-left: 2%;}
         
   }
-@media (max-width : 600px) {
+  @media (min-width : 600px) {
     .title1{
-        font-size: smaller;
+        font-size: 25px;
+        
     }
-    #itemname{
-        color:orange;
-        font-size: 100%;
-    }
-    #itemdisc{
-        font-size: 80%;
-    }
+    
     
         
   }
-  @media (max-width : 410px) {
+@media (max-width : 600px) {
     .title1{
-        font-size: smaller;
+        font-size: 20px;
+        
+    }
+    
+    
+        
+  }
+  @media (max-width : 440px) {
+    .logo{
+        width: 60%;
+    }
+    .title1{
+        font-size: 15px;
+        
     }
     #itemname{
-        color:orange;
+        color:red;
         font-size: 100%;
     }
     #itemdisc{
@@ -231,9 +239,11 @@ footer{
         grid-template-columns:auto ;
         padding-left: 20% ;
         
-        
     }
-    
+    .itemnav{
+        margin: 0.1em 0.1em 0.1em;
+        font-size: 0.8em;
+    }
         
   }
 @media (min-width : 851px) {
@@ -242,7 +252,11 @@ footer{
    .mobile-menu{
     display:none;
     }
-
+    .title1 {
+        
+        font-size:25px;
+        
+    }
     
   }
   
