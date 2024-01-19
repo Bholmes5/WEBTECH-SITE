@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="MainStyle.css" > <!-- link to the indervidual stylesheet --> 
+    <link rel="stylesheet" type="text/css" href="productsstyle.css" > <!-- link to the indervidual stylesheet --> 
     <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the general stylesheet -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -13,7 +13,7 @@
         <div class="title1">Student shop</div><!-- This adds a title to the page -->
         <nav> <!-- the navigation links are within this for accesibility purposes -->
             <ul class="desktoplistnav"><!-- This makes a un-orderd list tag for the desktop list navigation -->
-                <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+                <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link marked by the a tag -->
                 <li class="desktoplist"><a href="products.html"> Products</a> </li>
                 <li class="desktoplist"><a href="Cart.html"> Cart</a> </li>    
             </ul>
@@ -29,40 +29,39 @@
       }
         }</script>
    <ul id="mobilelistNav"><!-- This makes a un-orderd list tag for the mobile list navigation -->
-    <li ><a class="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+    <li ><a class="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link marked by the a tag -->
     <li ><a class="mobilelist" href="products.html"> Products</a> </li>
     <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
 </ul>
    <main>
     <ul class="itemnav">
         <li class="pro" >Products ></li>
-        <li class="select"><a href="#hoodies" onclick="console.log('boobies')">Hoodies</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+        <li class="select"><a href="#hoodies" onclick="console.log('boobies')">Hoodies</a></li> <!-- each list item contains a link marked by the a tag -->
         <li class="select"><a href="#jumpers"> Jumpers</a> </li>
         <li class="select"><a href="#tshirt"> Tshirts</a> </li>   
     </ul>
-    <button id ="scrolltop">
+    <button id ="scrolltop"><!--this is the button to make the site scroll to the top -->
     Top
     </button>
     <script>
-    function burgerfunc(){
-        var nav = document.getElementById("mobilelistNav");
-        if (nav.style.display === "flex") {
-            nav.style.display = "none";
-    
-        } else   {
-            nav.style.display = "flex";
-  }
-    }
-    const scrolltop = document.querySelector("#scrolltop");
+    function burgerfunc(){//this is the burger menu function to make the mobile list nave show and hide when the button is clicked 
+            var nav = document.getElementById("mobilelistNav");// sets a variable as nav for the item in the html 
+            if (nav.style.display === "flex") {// this if statement checks if it is already shown or hidden then inverts
+                nav.style.display = "none";
+            } else   {
+                nav.style.display = "flex";
+      }
+        }
+    const scrolltop = document.querySelector("#scrolltop");//This adds a event listner to scroll top looking for a click
     scrolltop.addEventListener("click",function() {
-        window.scrollTo({
-            top:0,
+        window.scrollTo({//when a click is detected it will do the folllowing 
+            top:0,//go to top 0 left 0 and do a smooth scroll 
             left:0,
             behavior:"smooth"
         });
     });
  </script>
-    <div id="itemsgrid"> 
+    <div id="itemsgrid"> <!--This is here so when i add the array it has a place to go-->
 
     </div>
 <script>
@@ -103,19 +102,19 @@
     ['UCLan Hoodie (33)','Navy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (33).jpg'],
     ['UCLan Hoodie (34)','Bright Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (34).jpg']];
    
-    var grid = document.getElementById("itemsgrid") 
+    var grid = document.getElementById("itemsgrid") // this sets a variable as a grid 
 
-    for (var i=0; i<hoodies.length;i++){
+    for (var i=0; i<hoodies.length;i++){//this makes a loop to fill the array with the hoodies 
         grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage' width='100%' src='"+hoodies[i][4]+"'alt='"+hoodies[i][0]+"'><h1 id='itemname'>"+hoodies[i][0]+"-"+hoodies[i][1]+"</h1><p id='itemdisc'>"+hoodies[i][2]+"</p><p id='readmore"+i+"'><a id='readmore' href='item.html'onclick=read("+i+")>Read More</a></p><p id='itemprice'>"+hoodies[i][3]+"</p><button class ='buybutton' onclick='buyh("+i+")'>Buy</button></div></div>";
-    }
+    }//this gets the grid and fills it with a new div for each item calls it hoodies for the scroll to then adds the image from hoodie array point i position 4 this then continues for the rest of the line 
 
-    function read(i){
+    function read(i){// this is used for the read more it sets the session storage as the array line that it was on when clicked
         sessionStorage.setItem('more',JSON.stringify(hoodies[i]));
     }
 
-    function buyh(i){
+    function buyh(i){// this is for when the buy button is clicked. it gets the i variable from being passed through
         alert("The item "+ hoodies[i][0] +" "+ hoodies[i][1] +" has been added to the cart");
-        
+        // 
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         counter ++;
@@ -252,7 +251,7 @@
         }
     }
     </script>
-    
+
 </main>
 
 <footer>
