@@ -23,6 +23,9 @@ header {
 #logo{
     width: 80%;
 }
+a{
+    text-c
+}
    
 .desktoplistnav{
     display: flex;
@@ -33,19 +36,16 @@ header {
     
 }
 
-    .desktoplist{
-        &:hover {
-            font-weight: bold;
-        }
-        list-style: none;
-        text-align:center;
-        
-        font-size: 1.1em;
-        padding: 0.0em;
-        margin: 1em 1em 1em;
-        
-        
+.desktoplist{
+    &:hover {
+        font-weight: bold;
     }
+    list-style: none;
+    text-align:center;    
+    font-size: 1.1em;
+    padding: 0.0em;
+    margin: 1em 1em 1em;    
+}
     nav{
         margin-left: auto;
     }
@@ -55,15 +55,12 @@ header {
     
     }
     .mobile-menu{/* Burger menu */
-    
         position: relative;
         right: 0%;
         margin-right:0.5em;
         cursor: pointer;
         margin-left: auto;
     }
-    
-
 
 #mobilelistNav{
         
@@ -87,29 +84,27 @@ header {
     text-align: right;
 }
 
-
-
 footer {
-    bottom: 0;
     display: flex;
     margin-top: 1em;
-    position: absolute;
+    
+    bottom: 0;
     width: 100%;
     color: white;
-    background-color: #007FB0;
+    background-color: #34516C;
 }
 
 .footer-grid {
-    bottom: 0;
+    
     margin-left: 5%;
     margin-right: auto;
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: space-evenly;
   }
+
 .grid-item{
     align-items: space-evenly;
-    
     margin-right: 30%;
 }
   
