@@ -62,8 +62,8 @@
     }
     #itemname{
         text-align: center;/*This is to align the content or text*/
-        color:orange;
-        font-size: 150%;/*This sets the font at 1150%*/
+        color:#F47721;
+        font-size: 150%;/*This sets the font at 150%*/
     }
     #itemdisc{
         text-align: center;/*This is to align the content or text*/
@@ -95,7 +95,7 @@
 
   @media (max-width : 440px) {/*the media tag can be used to ajust details depending on the size of the view width */
     #itemname{
-        color:red;
+        
         font-size: 100%;/*This sets the font at 100% when it becomes smaller*/
     }
     #itemdisc{
