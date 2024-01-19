@@ -5,36 +5,26 @@
     flex-direction: column;
     margin-left: auto;/*The margin left and right auto add even spacing either side*/
     margin-right: auto;
-    width: 60%;//
+    width: 60%;/*if the width is at 60% it provides a good size on any platform*/
     text-align: center;
     background-color: #e8e8e8;
-    align-content: center;
+    align-content: center;/*This is to align the content or text*/
     border:  solid #C7CBDA;
 }
 
 .footer{
-    position: fixed;
+    position: fixed;/*This keeps the footer at the bottom*/
     bottom: 0;
 }
 #itemimage{
     margin-left: auto;
     margin: auto;
-    width: 60%;
+    width: 60%;/*if the width is at 60% it provides a good size on any platform*/
 }
 #itemname{
     color:#F47721;
-    font-size: 150%;
+    font-size: 150%;/*This sets the font at 150%*/
 }
 #itemdisc{
-    font-size: 100%;
+    font-size: 100%;/*This sets the font at 100%*/
 }
-
-@media (max-width : 450px) {
-
-  }
-  @media (min-width : 850px) {
-    
-   
-    
-  }
-  
