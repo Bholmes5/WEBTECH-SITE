@@ -35,17 +35,18 @@
         <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
     </ul>
    <main>
-<button onclick="clear()" id="clear">
-    Clear Cart
-</button>
+
 
 <div id ="item">
-
+<button onclick="clear()" id="clear" >
+    Clear Cart
+</button>
 </div>
 
 <script>
         function clear(){
-            localStorage.clear
+            alert
+            localStorage.clear();
         }
 
         var items = document.getElementById("item") 
