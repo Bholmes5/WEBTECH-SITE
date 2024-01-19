@@ -1,16 +1,27 @@
 #items{
-    align-content: center;
+    align-content: center;/*This is to align the content or text*/
     padding:0% 22% 0em;
     row-gap: 0.25%;
     column-gap: 0.25%;
-    align-items: center;
-    display: grid;
+    align-items: center;/*This is to align the content or text*/
+    display: grid;/*This puts the items in a grid so it can be personised easier and have a more real look */
     grid-template-columns:auto auto auto auto ;
-    
-   
 }
- #itemimage{
-        
+.footer{
+    position: fixed;
+    bottom: 0;
+}
+#clear {
+    position:fixed;
+    right:10px;
+    top: 10%;
+    width : 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e67239;
+    cursor: pointer;
+}
+ #itemimage{ 
         width: 100px;
     }
     #itemname{
