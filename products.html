@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="productsstyle.css" > <!-- link to the stylesheet --> 
-    <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="MainStyle.css" > <!-- link to the indervidual stylesheet --> 
+    <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the general stylesheet -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student Shop Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Student Shop Home Page</title><!-- This adds a title to the tab/page -->
 </head>
-<body>
+<body><!-- applys the body tag -->
     <header> <!-- header bar that is going to appear at the top of the screen -->
-        <div class="logo"><img width="80%"  src="logo.svg" alt="UCLan logo" ></div>
-        <div class="title1">Student shop</div>
-        
-        <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
-            
-            <ul class="desktoplistnav">
+        <div class="logo"><img id="logo" src="logo.svg" alt="UCLan logo" ></div><!-- This adds a logo into the header with a alt tag of Uclan logo -->
+        <div class="title1">Student shop</div><!-- This adds a title to the page -->
+        <nav> <!-- the navigation links are within this for accesibility purposes -->
+            <ul class="desktoplistnav"><!-- This makes a un-orderd list tag for the desktop list navigation -->
                 <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
                 <li class="desktoplist"><a href="products.html"> Products</a> </li>
-                <li class="desktoplist"><a href="cart.html"> Cart</a> </li>   
-            </div>
+                <li class="desktoplist"><a href="Cart.html"> Cart</a> </li>    
+            </ul>
         </nav> 
-        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
-    </header>
+        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="burger menu"><!--This is the source image for the burger menu-->    </header>
     <script>
-        function burgerfunc(){
-            var nav = document.getElementById("mobilelistNav");
-            if (nav.style.display === "flex") {
+        function burgerfunc(){//this is the burger menu function to make the mobile list nave show and hide when the button is clicked 
+            var nav = document.getElementById("mobilelistNav");// sets a variable as nav for the item in the html 
+            if (nav.style.display === "flex") {// this if statement checks if it is already shown or hidden then inverts
                 nav.style.display = "none";
             } else   {
                 nav.style.display = "flex";
       }
         }</script>
-    <ul id="mobilelistNav">
-        <li ><a id="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
-        <li ><a id="mobilelist" href="products.html"> Products</a> </li>
-        <li ><a id="mobilelist" href="cart.html"> Cart</a> </li>       
-    </ul>
-    <container>
+   <ul id="mobilelistNav"><!-- This makes a un-orderd list tag for the mobile list navigation -->
+    <li ><a class="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+    <li ><a class="mobilelist" href="products.html"> Products</a> </li>
+    <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
+</ul>
    <main>
     <ul class="itemnav">
         <li class="pro" >Products ></li>
@@ -106,15 +102,20 @@
     ['UCLan Hoodie (32)','Burgundy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (32).jpg'],
     ['UCLan Hoodie (33)','Navy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (33).jpg'],
     ['UCLan Hoodie (34)','Bright Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (34).jpg']];
+   
     var grid = document.getElementById("itemsgrid") 
+
     for (var i=0; i<hoodies.length;i++){
         grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage' width='100%' src='"+hoodies[i][4]+"'alt='"+hoodies[i][0]+"'><h1 id='itemname'>"+hoodies[i][0]+"-"+hoodies[i][1]+"</h1><p id='itemdisc'>"+hoodies[i][2]+"</p><p id='readmore"+i+"'><a id='readmore' href='item.html'onclick=read("+i+")>Read More</a></p><p id='itemprice'>"+hoodies[i][3]+"</p><button class ='buybutton' onclick='buyh("+i+")'>Buy</button></div></div>";
     }
+
     function read(i){
         sessionStorage.setItem('more',JSON.stringify(hoodies[i]));
     }
+
     function buyh(i){
         alert("The item "+ hoodies[i][0] +" "+ hoodies[i][1] +" has been added to the cart");
+        
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         counter ++;
@@ -125,6 +126,7 @@
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(hoodies[i]));
         }
+
     }
     var jumpers =[['UCLan Logo Jumper','Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (1).jpg'],
     ['UCLan Logo Jumper','Rusty Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (2).jpg'],
@@ -166,15 +168,20 @@
     ['UCLan Logo Jumper','Creame','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (38).jpg'],
     ['UCLan Logo Jumper','Lighter Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (39).jpg'],
     ['UCLan Logo Jumper','Light Grey','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (40).jpg']];
+    
     var grid = document.getElementById("itemsgrid") 
+
     for (var i=0; i<jumpers.length;i++){
         grid.innerHTML += "<div id = 'eachitem'><div id ='jumpers'><img id='itemimage' width='100%' src='"+jumpers[i][4]+"'alt='"+jumpers[i][0]+"'><h1 id='itemname'>"+jumpers[i][0]+"-"+jumpers[i][1]+"</h1><p id='itemdisc'>"+jumpers[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=readj("+i+")>Read More</a></p><p id='itemprice'>"+jumpers[i][3]+"</p><button class ='buybutton' onclick='buyj("+i+")'>Buy</button></div></div>";
     }
+
     function readj(i){
         sessionStorage.setItem('more',JSON.stringify(jumpers[i]));
     }
+
     function buyj(i){
         alert("The item "+ jumpers[i][0] +" "+ jumpers[i][1] +" has been added to the cart");
+        
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         counter ++;
@@ -222,7 +229,9 @@
     ['UCLan Logo Tshirt','Creame','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','tshirts/tshirt (33).jpg'],
     ['UCLan Logo Tshirt','Teal Blue','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','tshirts/tshirt (34).jpg'],
     ['UCLan Logo Tshirt','White','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','tshirts/tshirt (35).jpg']];
+   
     var grid = document.getElementById("itemsgrid") 
+
     for (var i=0; i<tshirts.length;i++){
         grid.innerHTML += "<div id = 'eachitem'><div id ='tshirt'><img id='itemimage' width='100%' src='"+tshirts[i][4]+"'alt='"+tshirts[i][0]+"'><h1 id='itemname'>"+tshirts[i][0]+"-"+tshirts[i][1]+"</h1><p id='itemdisc'>"+tshirts[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=readt("+i+")>Read More</a></p><p id='itemprice'>"+tshirts[i][3]+"</p><button class ='buybutton' onclick='buyt("+i+")'>Buy</button></div></div>";
     }
@@ -243,9 +252,11 @@
         }
     }
     </script>
+    
 </main>
+
 <footer>
-    <div class="footer-grid">
+    <div class="footer-grid"><!--A grid is used for allowing better formatting of the footer-->
         <div class="grid-item"><h1 >Links</h1>
         <p>Student Union</p>
         </div>
@@ -256,6 +267,6 @@
         <p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
         </div>
 </footer>
-</container>
+
 </body>
 </html>
