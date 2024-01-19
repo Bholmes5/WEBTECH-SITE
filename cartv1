@@ -45,7 +45,8 @@
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         for (var i=1; i<=counter ;i++){
-           items.innerHTML += "<div id ='items'><p id ='counter'>"+i+"</p><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemprice'>"+read()[3]+"</p></div>";
+           items.innerHTML += "<div id ='items'><p id ='counter'>Items</p><p></p><h1 id='itemname'>"Product</h1><p id='itemprice'>"+read()[3]+"</p></div>";
+           items.innerHTML += "<div id ='items'><p id ='counter'></p><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemprice'>"+read()[3]+"</p></div>";
         }
         } else {
             items.innerHTML = "<p>There is nothing in the basket</p>"
