@@ -52,16 +52,16 @@
     }
     function buy(){// this is for when the buy button is clicked
         alert("The item "+ read()[0] +" "+ read()[1] +" has been added to the cart");
-         // this displays a alert including the jumper added
-        if (localStorage.getItem('counter')!== null){
-        counter = localStorage.getItem('counter');
+         // this displays a alert including the item added
+        if (localStorage.getItem('counter')!== null){// this checks if there is already a counter
+        counter = localStorage.getItem('counter');// if there is then it will add one then add the item witht the counter intergration
         counter ++;
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",(sessionStorage.getItem('more')));
+        localStorage.setItem("more"+counter+"",(sessionStorage.getItem('more')));// this adds the session storage to the local storage
         } else {
-        var counter = 1 
+        var counter = 1 //if not it will make a new counter
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"", (sessionStorage.getItem('more')));
+        localStorage.setItem("more"+counter+"", (sessionStorage.getItem('more')));// this adds the session storage to the local storage
         }
     }
     </script>
