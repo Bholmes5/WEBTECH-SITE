@@ -107,7 +107,7 @@
     var grid = document.getElementById("itemsgrid") 
     for (var i=0; i<hoodies.length;i++){
         
-        grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage' width='100%' src='"+hoodies[i][4]+"'alt='"+hoodies[i][0]+"'><h1 id='itemname'>"+hoodies[i][0]+"-"+hoodies[i][1]+"</h1><p id='itemdisc'>"+hoodies[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=read("+i+")>Read More</a></p><p id='itemprice'>"+hoodies[i][3]+"</p><button class ='buybutton' onclick='buyh("+i+")'>Buy</button></div></div>";
+        grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage' width='100%' src='"+hoodies[i][4]+"'alt='"+hoodies[i][0]+"'><h1 id='itemname'>"+hoodies[i][0]+"-"+hoodies[i][1]+"</h1><p id='itemdisc'>"+hoodies[i][2]+"</p><p id='readmore"+i+"'><a id='readmore" href='item.html'onclick=read("+i+")>Read More</a></p><p id='itemprice'>"+hoodies[i][3]+"</p><button class ='buybutton' onclick='buyh("+i+")'>Buy</button></div></div>";
     }
     function read(i){
         sessionStorage.setItem('more',JSON.stringify(hoodies[i]));
