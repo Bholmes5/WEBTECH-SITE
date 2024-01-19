@@ -1,24 +1,21 @@
  
-main {
-    margin-left:25%;
-    margin-right:25%;
-}
+
 h1{
     padding: 1em;
-    text-align:center;
+    
     color:  #34516C;
 }
-h2{
-   
+.headings{
     margin-left:5%;
-    text-align: left;
+    
     color: gold;
+    
 }
-.mainin
-p{
+.mainin{
     text-align: center;
     margin:2%;
 }
+
 .vid1{
     display: block;
     width: 100%;
@@ -30,13 +27,19 @@ p{
 }
 
 @media (max-width : 850px) {
-       
+    main {
+        margin-left:25%;
+        margin-right:25%;
+    }
         
     }
 @media (min-width : 850px) {
     .vid2{
       min-height: 20em;  
     }
-    
+    main {
+        margin-left:25%;
+        margin-right:25%;
+    }
       
     }
