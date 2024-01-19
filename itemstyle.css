@@ -93,7 +93,7 @@ header {
     text-align: right;
 }
 main{
-    margin: 5em,5em,5em;
+    allign-items:center;
 }
 
 .item-name{
