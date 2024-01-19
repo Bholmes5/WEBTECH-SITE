@@ -1,6 +1,6 @@
 <!DOCTYPE html5>
 <html lang="en">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <link rel="stylesheet" type="text/css" href="productsstyle.css" /> <!-- link to the stylesheet -->
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body>
     <header> <!-- header bar that is going to appear at the top of the screen -->
         <div class="logo"><img width="80%"  src="logo.svg" alt="UCLan logo" ></div>
-        <div class="Title1">Student shop</div>
+        <div class="title1">Student shop</div>
         
         <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
             
@@ -21,13 +21,13 @@
             </ul>
             
         </nav> 
-        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
+        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
     </header>
 
-    <ul class="mobilelistNav">
-        <li class="mobilelist"><a href="Home.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
-        <li class="mobilelist"><a href="Products.html"> Products</a> </li>
-        <li class="mobilelist"><a href="Cart.html"> Cart</a> </li>   
+    <ul id="mobilelistNav">
+        <li ><a id="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+        <li ><a id="mobilelist" href="products.html"> Products</a> </li>
+        <li ><a id="mobilelist" href="cart.html"> Cart</a> </li>   
         
             
     </ul>
@@ -39,19 +39,30 @@
         <li class="select"><a href="#jumpers"> Jumpers</a> </li>
         <li class="select"><a href="#tshirt"> Tshirts</a> </li>   
     </ul>
-    <style>
-        #btnscrolltop {
-            position:fixed;
-            left:10px;
-            bottom: 10px;
-            width : 50px;
-            height: 50px;
-            
-        }
-    </style>
-    <button if ="scrolltop">
+ 
+    <button id ="scrolltop">
     Top
     </button>
+    <script>
+    function burgerfunc(){
+        var nav = document.getElementById("mobilelistNav");
+        if (nav.style.display === "flex") {
+            nav.style.display = "none";
+    
+        } else   {
+            nav.style.display = "flex";
+  }
+    }
+    const scrolltop = document.querySelector("#scrolltop");
+    scrolltop.addEventListener("click",function() {
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior:"smooth"
+        });
+    });
+
+ </script>
     <div id="itemsgrid"> 
 
     </div>
