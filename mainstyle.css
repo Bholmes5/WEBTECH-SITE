@@ -1,108 +1,16 @@
-*{
-    
-    font-family: 'sans-serif';
-}
-body{    
-    margin: 0px;
-    padding: 0px;
-}
-header {
 
-    width: 100%;
-    background-color: #BE1622;
-    display: flex;
-    flex-direction: row;
-    padding: 0 0 0;
 
-    .Title1 {
-        color: white;
-        font-weight: bold;
-        text-align: left;
-        font-size: 1.5em;
-        margin-top: 1.1em;
-    }
-
-    .desktoplistNav{
-        padding:0;
-        margin-right: 0.5em;
-        margin-top:0.2em ;
-        display: flex;
-        flex-direction: row;
-        
-        
-    }
-    .desktoplist{
-        &:hover {
-            font-weight: bold;
-        }
-        list-style: none;
-        text-align:center;
-        
-        font-size: 1.1em;
-        padding: 0.0em;
-        margin: 1em 1em 1em;
-        
-        
-    }
-    nav{
-        margin-left: auto;
-    }
-    .desktoplist a{
-        text-decoration: none;
-        color: ghostwhite;
-    
-    }
-    .mobile-menu{/* Burger menu */
-    
-        position: relative;
-        right: 0%;
-        border: 3px solid #73AD21;
-        cursor: pointer;
-        margin-left: auto;
-        
-    }
-    .mobilelistNav.active{
-        opacity: 1;
-    }
 
   
    
-
-}
 main {
     margin-left:25%;
     margin-right:25%;
 }
 
-#mobilelistNav{
-        
-    background-color: #34516C;
-    width: 100%;
-    margin: 0;
-    display: none;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    
-#mobilelist{
-    
-    text-decoration: none;
-    color: ghostwhite;
-    &:hover {
-        font-weight: bold;
-    }
-    padding: 0.5em;
-    font-size: 1.3em;
-    text-align: right;
-}
 
-}
-footer {
-    display: flex;
-    
-    width: 100%;
-    background-color: #007FB0;
-}
+
+
 
 h1{
     padding: 1em;
@@ -120,23 +28,6 @@ p{
     margin:2%;
 }
 
-.footer-grid {
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: space-evenly;
-  }
-.grid-item{
-    align-items: space-evenly;
-    
-    margin-right: 30%;
-}
-.grid-item p{
-    font-size: 90%;
-}
-.grid-item h1{
-    font-size: 100%;
-}
 .vid1{
     display: block;
 
@@ -147,22 +38,13 @@ p{
 
     width: 100%;
 }
-.mobilelist a{
-    display: none; 
-}
+
 
 @media (max-width : 850px) {
-        .desktoplist{
-            display: none;
-        }
+       
         
     }
 @media (min-width : 850px) {
         
-       .mobile-menu{
-        display:none;
-        }
-        .mobilelistNav{
-            display: none;
-        }
+      
     }
