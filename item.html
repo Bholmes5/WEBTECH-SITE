@@ -1,8 +1,7 @@
-
 <!DOCTYPE html5>
 <html lang="en"></html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Hoodies.css" /> <!-- link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="itemstyle.css" /> <!-- link to the stylesheet -->
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Student Shop Home Page</title>
@@ -11,7 +10,6 @@
     <header> <!-- header bar that is going to appear at the top of the screen -->
         <div class="logo"><img width="80%"  src="logo.svg" alt="UCLan logo" ></div>
         <div class="Title1">Student shop</div>
-        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
         <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
             
             <ul class="desktoplistnav">
@@ -21,6 +19,7 @@
                 
             </ul>
         </nav> 
+        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
     </header>
 
 
@@ -32,10 +31,35 @@
     </ul>
 <main>
 
-    <img class="itemimg"width="70%"  src="hoodies\hoodie (1).jpg" alt="Hoodie" ><h1>UCLan Hoodie (1) - Purple</h1><p>Cotton's authentic character and practicality are combined in this comfy warm and luxurious hoodie for students that goes with everything to create casual looks.</p><a href="mainpage.html">Read More</a><br><button onclick="buy()">Buy</button>
-
+    <div id="item">
+       
+    </div>
+                
 </main>
+<script>
+    var items = document.getElementById("item") 
+    
+    items.innerHTML += "<div id ='hoodies'></div><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemdisc'>"+read()[2]+"</p><p id='itemprice'>"+read()[3]+"</p><button class ='buybutton' onclick='buy()'>Buy</button>";
+    
+    function read(){
+    const localData = JSON.parse(sessionStorage.getItem('more')) || [0, 0, 0, 0, 0];
+    return localData; 
+    }
+    function buy(){
+        if (localStorage.getItem('counter')!== null){
+        counter = localStorage.getItem('counter');
+        counter ++;
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",sessionStorage.getItem('more')) || [0, 0, 0, 0, 0]);
+        } else {
+        var counter = 1 
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(hoodies[i]));
+        }
+        
+    }
 
+    </script>
 
     <footer>
         
