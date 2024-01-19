@@ -1,17 +1,8 @@
-
-
-
-  
-   
+ 
 main {
     margin-left:25%;
     margin-right:25%;
 }
-
-
-
-
-
 h1{
     padding: 1em;
     text-align:center;
@@ -23,11 +14,11 @@ h2{
     text-align: left;
     color: gold;
 }
+.mainin
 p{
     text-align: center;
     margin:2%;
 }
-
 .vid1{
     display: block;
     width: 100%;
@@ -38,13 +29,14 @@ p{
     
 }
 
-
 @media (max-width : 850px) {
        
         
     }
 @media (min-width : 850px) {
-    .vid2
-    min-height: 100em;
+    .vid2{
+      min-height: 20em;  
+    }
+    
       
     }
