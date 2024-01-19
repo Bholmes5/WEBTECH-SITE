@@ -38,29 +38,29 @@
 
 
 <div id ="item">
-<button onclick="clear()" id="clear" >
+<button onclick="empty()" id="clear" >
     Clear Cart
 </button>
 </div>
 
 <script>
-        function clear(){
-            alert
+        function empty(){
             localStorage.clear();
+            location.reload()
         }
 
         var items = document.getElementById("item") 
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         items.innerHTML += "<div id ='items'><p id ='counter'>Items</p><p></p><h1 id='itemname'>Product</h1><h1 id='itemname'>Price</h1>" 
-        for (var i=1; i<=counter ;i++){
-                      
+        for (var i=1; i<=counter ;i++){// this checks if there is a counter if there is it will then continue
+                      // this gets data from the local storage and displays in this order from the array when chosen
             items.innerHTML += "<div id ='items'><p id ='counter'>"+i+"</p><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemprice'>"+read()[3]+"</p></div>";
         }
-        } else {
+        } else {// if not it will display this text
             items.innerHTML = "<p>There is nothing in the basket</p>"
         }
-        function read(){
+        function read(){// this read function is used to fill the loop to get the data from local storage 
         const localData = JSON.parse(localStorage.getItem("more"+i+"")) || [0, 0, 0, 0, 0];
         return localData
     }
