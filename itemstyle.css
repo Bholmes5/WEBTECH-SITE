@@ -11,6 +11,20 @@
     align-content: center;
     border:  solid #C7CBDA;
 }
+#scrolltop {
+    position:fixed;
+    left:10px;
+    bottom: 50%;
+    width : 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e67239;
+    cursor: pointer;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}
 #itemimage{
     margin-left: auto;
     margin: auto;
@@ -25,16 +39,11 @@
 }
 
 @media (max-width : 450px) {
-    .grid-item p{
-        font-size: 90%;
-    }
-    .grid-item h1{
-        font-size: 100%;
-    }
+
   }
   @media (min-width : 850px) {
     
    
     
   }
-
+  
