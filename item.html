@@ -58,11 +58,11 @@
         counter = localStorage.getItem('counter');
         counter ++;
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",sessionStorage.getItem('more') || [0, 0, 0, 0, 0]);
+        localStorage.setItem("more"+counter+"",JSON.parse(sessionStorage.getItem('more')) );
         } else {
         var counter = 1 
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",sessionStorage.getItem('more') || [0, 0, 0, 0, 0]));
+        localStorage.setItem("more"+counter+"",JSON.parse(sessionStorage.getItem('more')));
         }
         
     }
