@@ -1,44 +1,39 @@
  
 
-h1{
-    padding: 1em;
-    
-    color:  #34516C;
+h1{/* this is for the main heading on the page */
+    padding: 1em;/*This adds a padding all the way around the text*/
+    text-align: center;/*This aligns the text in the center of the text box*/
+    color:  #34516C;/*this sets the colour to a blue*/
 }
 .headings{
-    margin-left:5%;
     
-    color: gold;
-    
+    color: #F2BE1A;/*This is one of the uclan colour codes for the heading tags*/
 }
 .mainin{
-    text-align: center;
-    margin:2%;
+    text-align: center;/*This aligns the text in the center of the text box*/
+    margin:2%;/*adds a 2% margin all the way around*/
 }
 
 .vid1{
-    display: block;
-    width: 100%;
+    width: 100%;/*This sets the width of the video to 100% compared to the view size*/
 }
 .vid2{
-    display: block;
-    width: 100%;
-    
+    width: 100%;/*This sets the width of the video to 100% compared to the view size*/
 }
 
 @media (max-width : 850px) {
     main {
-        margin-left:25%;
-        margin-right:25%;
+        margin-left:10%;/*This adds margin to the left and right with a even width*/
+        margin-right:10%;
     }
         
     }
 @media (min-width : 850px) {
     .vid2{
-      min-height: 20em;  
+      min-height: 20em;  /*This adds a minimum hight to the video to make it fit the design*/
     }
     main {
-        margin-left:25%;
+        margin-left:25%;/*This adds margin to the left and right with a even width*/
         margin-right:25%;
     }
       
