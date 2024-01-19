@@ -92,6 +92,9 @@ header {
     font-size: 1.3em;
     text-align: right;
 }
+main{
+    margin: 5em,5em,5em;
+}
 
 .item-name{
     color:orange;
@@ -102,6 +105,13 @@ header {
 }
 .buybutton{
     align-self: center;
+}
+.shop-item{
+    width: 80%;
+    height: 100%;
+    background-color: e8e8e8;
+    align-content: center;
+    border:  solid #C7CBDA;
 }
 
 footer{
