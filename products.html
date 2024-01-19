@@ -31,14 +31,14 @@
     </ul>
     <pagecontainer>
    <main>
-    <div class="items-grid">
+    <div id="items-grid">
         
     </div>
     
 <script>
     // the following contains a collection of arrays, stored as Javascript objects, which are required to compelte this assessed task
     
-    var hoodies = [['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies\hoodie (1).jpg'],
+    var hoodies = [['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','\hoodies\hoodie (1).jpg'],
     ['UCLan Hoodie (2)','Light Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies\hoodie (2).jpg'],
     ['UCLan Hoodie (3)','Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies\hoodie (3).jpg'],
     ['UCLan Hoodie (4)','Dark Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies\hoodie (4).jpg'],
@@ -75,8 +75,7 @@
     
     var itemsgrid = document.getElementById("items-grid") 
     for (var i=0; i<hoodies.length;i++){
-        
-        itemsgrid.innerHTML += "<img class='itemimage' width='100%' src='>" + hoodies[i][4] + "' alt='" +hoodies[i][0] +"'";
+        itemsgrid.innerHTML += "<img id='itemimage' width='100%' src='"+hoodies[i][5]+"'alt='"+hoodies[i][0]+"'>";
     }
 
     var jumpers =[['UCLan Logo Jumper','Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','/jumpers/jumper (1).jpg'],
