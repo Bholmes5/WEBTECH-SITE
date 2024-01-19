@@ -30,13 +30,12 @@ p{
 
 .vid1{
     display: block;
-
     width: 100%;
 }
 .vid2{
     display: block;
-
     width: 100%;
+    min-height: ;
 }
 
 
