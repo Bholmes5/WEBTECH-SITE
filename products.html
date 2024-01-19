@@ -1,9 +1,9 @@
 <!DOCTYPE html5>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" type="text/css" href="productsstyle.css" /> <!-- link to the stylesheet -->
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Student shop Product Page</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
             
             <ul class="desktoplistnav">
                 <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
-                <li class="desktoplist"><a href="Products.html"> Products</a> </li>
-                <li class="desktoplist"><a href="Cart.html"> Cart</a> </li>   
+                <li class="desktoplist"><a href="products.html"> Products</a> </li>
+                <li class="desktoplist"><a href="cart.html"> Cart</a> </li>   
                 
             </ul>
             
@@ -31,26 +31,27 @@
         
             
     </ul>
-    <pagecontainer>
+    <container>
    <main>
-    
-    <ul class="desktoplistnav">
-        <li class="desktoplist"><a href="#hoodies">Hoodies</a></li> <!-- each list item contains a link (marked by the anchor tag -->
-        <li class="desktoplist"><a href="#jumpers"> Jumpers</a> </li>
-        <li class="desktoplist"><a href="#tshirt"> Tshirts</a> </li>   
-        
+    <ul class="itemnav">
+        <li class="pro" >Products ></li>
+        <li class="select"><a href="#hoodies" onclick="console.log('boobies')">Hoodies</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+        <li class="select"><a href="#jumpers"> Jumpers</a> </li>
+        <li class="select"><a href="#tshirt"> Tshirts</a> </li>   
     </ul>
+    <script>
+        #btns
+    </script>
+    <button if ="scrolltop">
+    Top
+    </button>
+    <div id="itemsgrid"> 
 
-    <button class ="scrolltop"><a href ="#header">Top</a></button>
-    
-
-    <div id="itemsgrid">
-       
     </div>
-    
 <script>
     // the following contains a collection of arrays, stored as Javascript objects, which are required to compelte this assessed task
-    var hoodies = [['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (1).jpg'],
+    var hoodies = [
+    ['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (1).jpg'],
     ['UCLan Hoodie (2)','Light Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (2).jpg'],
     ['UCLan Hoodie (3)','Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (3).jpg'],
     ['UCLan Hoodie (4)','Dark Grey','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (4).jpg'],
@@ -84,16 +85,28 @@
     ['UCLan Hoodie (32)','Burgundy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (32).jpg'],
     ['UCLan Hoodie (33)','Navy New','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (33).jpg'],
     ['UCLan Hoodie (34)','Bright Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','hoodies/hoodie (34).jpg']];
-    
+   
     var grid = document.getElementById("itemsgrid") 
     for (var i=0; i<hoodies.length;i++){
         
-        grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'></div><img id='itemimage' width='100%' src='"+hoodies[i][4]+"'alt='"+hoodies[i][0]+"'><h1 id='itemname'>"+hoodies[i][0]+"-"+hoodies[i][1]+"</h1><p id='itemdisc'>"+hoodies[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'>Read More<a></p><p id='itemprice'>"+hoodies[i][3]+"</p><button class ='buybutton' onclick='buy()'>Buy</button></div>";
+        grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage' width='100%' src='"+hoodies[i][4]+"'alt='"+hoodies[i][0]+"'><h1 id='itemname'>"+hoodies[i][0]+"-"+hoodies[i][1]+"</h1><p id='itemdisc'>"+hoodies[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=read("+i+")>Read More</a></p><p id='itemprice'>"+hoodies[i][3]+"</p><button class ='buybutton' onclick='buyh("+i+")'>Buy</button></div></div>";
+    }
+    function read(i){
+        sessionStorage.setItem('more',JSON.stringify(hoodies[i]));
+    }
+    function buyh(i){
+        if (localStorage.getItem('counter')!== null){
+        counter = localStorage.getItem('counter');
+        counter ++;
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(hoodies[i]));
+        } else {
+        var counter = 1 
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(hoodies[i]));
+        }
         
     }
-
-
-
     var jumpers =[['UCLan Logo Jumper','Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (1).jpg'],
     ['UCLan Logo Jumper','Rusty Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (2).jpg'],
     ['UCLan Logo Jumper','Water Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (3).jpg'],
@@ -137,7 +150,23 @@
     var grid = document.getElementById("itemsgrid") 
     for (var i=0; i<jumpers.length;i++){
         
-        grid.innerHTML += "<div id = 'eachitem'><div id ='jumpers'></div><img id='itemimage' width='100%' src='"+jumpers[i][4]+"'alt='"+jumpers[i][0]+"'><h1 id='itemname'>"+jumpers[i][0]+"-"+jumpers[i][1]+"</h1><p id='itemdisc'>"+jumpers[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'>Read More<a></p><p id='itemprice'>"+jumpers[i][3]+"</p></div>";
+        grid.innerHTML += "<div id = 'eachitem'><div id ='jumpers'><img id='itemimage' width='100%' src='"+jumpers[i][4]+"'alt='"+jumpers[i][0]+"'><h1 id='itemname'>"+jumpers[i][0]+"-"+jumpers[i][1]+"</h1><p id='itemdisc'>"+jumpers[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=readj("+i+")>Read More</a></p><p id='itemprice'>"+jumpers[i][3]+"</p><button class ='buybutton' onclick='buyj("+i+")'>Buy</button></div></div>";
+        
+    }
+    function readj(i){
+        sessionStorage.setItem('more',JSON.stringify(jumpers[i]));
+    }
+    function buyj(i){
+        if (localStorage.getItem('counter')!== null){
+        counter = localStorage.getItem('counter');
+        counter ++;
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(jumpers[i]));
+        } else {
+        var counter = 1 
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(jumpers[i]));
+        }
         
     }
 
@@ -182,23 +211,48 @@
     var grid = document.getElementById("itemsgrid") 
     for (var i=0; i<tshirts.length;i++){
         
-        grid.innerHTML += "<div id = 'eachitem'><div id ='tshirt'></div><img id='itemimage' width='100%' src='"+tshirts[i][4]+"'alt='"+tshirts[i][0]+"'><h1 id='itemname'>"+tshirts[i][0]+"-"+tshirts[i][1]+"</h1><p id='itemdisc'>"+tshirts[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'>Read More<a></p><p id='itemprice'>"+tshirts[i][3]+"</p></div>";
+        grid.innerHTML += "<div id = 'eachitem'><div id ='tshirt'><img id='itemimage' width='100%' src='"+tshirts[i][4]+"'alt='"+tshirts[i][0]+"'><h1 id='itemname'>"+tshirts[i][0]+"-"+tshirts[i][1]+"</h1><p id='itemdisc'>"+tshirts[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=readt("+i+")>Read More</a></p><p id='itemprice'>"+tshirts[i][3]+"</p><button class ='buybutton' onclick='buyt("+i+")'>Buy</button></div></div>";
+        
+    }
+    function readt(i){
+        sessionStorage.setItem('more',JSON.stringify(tshirts[i]));
+    }
+    function buyt(i){
+        if (localStorage.getItem('counter')!== null){
+        counter = localStorage.getItem('counter');
+        counter ++;
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(tshirts[i]));
+        } else {
+        var counter = 1 
+        localStorage.setItem('counter',counter);
+        localStorage.setItem("more"+counter+"",JSON.stringify(tshirts[i]));
+        }
         
     }
     </script>
+
 
 </main>
 
 
 
-    <footer>
+<footer>
 
-        <div class="footer-grid">
-            <div class="grid-item"><h1 >Links</h1><p>Student Union</p></div>
-            <div class="grid-item"><h1 >Contact</h1><p>Email:suinformation@uclan.ac.uk Phone: 01772893000</p></div>
-            <div class="grid-item"><h1 >Location</h1><p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
-          </div>
-    </footer>
-</pagecontainer>
+    <div class="footer-grid">
+        <div class="grid-item"><h1 >Links</h1>
+        <p>Student Union</p>
+        </div>
+        <div class="grid-item"><h1 >Contact</h1>
+        <p>Email:suinformation@uclan.ac.uk Phone: 01772893000</p>
+        </div>
+        <div class="grid-item"><h1 >Location</h1>
+        <p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
+        </div>
+</footer>
+
+</container>
+
+
 </body>
 </html>
