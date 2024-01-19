@@ -93,7 +93,7 @@ footer {
     bottom: 0;
     display: flex;
     margin-top: 1em;
-    
+    position: absolute;
     width: 100%;
     color: white;
     background-color: #007FB0;
@@ -112,40 +112,32 @@ footer {
     
     margin-right: 30%;
 }
-
   
 @media (max-width : 850px) {
     .desktoplist{
         display: none;
+    }  
+  }
+  @media (min-width : 600px) {
+    .title1{
+        font-size: 25px; 
+    }  
+  }
+@media (max-width : 600px) {
+    .title1{
+        font-size: 20px;  
     }
+    .footer-grid{
+        grid-template-columns: auto auto;
+    }   
+  }
+  @media (min-width : 440px){
     .grid-item p{
-        font-size: 90%;
+        font-size: 80%;
     }
     .grid-item h1{
         font-size: 100%;
     }
-        
-  }
-  @media (min-width : 600px) {
-    .title1{
-        font-size: 25px;
-        
-    }
-    
-    
-        
-  }
-@media (max-width : 600px) {
-    .title1{
-        font-size: 20px;
-        
-        
-    }
-    .footer-grid{
-        grid-template-columns: auto auto;
-    }
-    
-        
   }
   @media (max-width : 440px) {
     .logo{
@@ -153,44 +145,35 @@ footer {
     }
     .title1{
         font-size: 15px;
-        
     }
     #itemname{
         color:red;
         font-size: 100%;
     }
     #itemdisc{
-        
         font-size: 80%;
     }
     #itemsgrid{
         grid-template-columns:auto ;
         padding-left: 20% ;
-        
     }
     .itemnav{
         margin: 0.1em 0.1em 0.1em;
         font-size: 0.8em;
     }
-        
-  }
-@media (min-width : 851px) {
-    
     .grid-item p{
-        font-size: 90%;
+        font-size: 70%;
     }
     .grid-item h1{
-        font-size: 100%;
+        font-size: 90%;
     }
-
+  }
+@media (min-width : 851px) {
    .mobile-menu{
     display:none;
     }
     .title1 {
-        
         font-size:25px;
-        
     }
-    
   }
   
