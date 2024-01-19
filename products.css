@@ -46,7 +46,7 @@
     align-self: center;/*This is to align the content or text*/
     display: grid;/*This puts the items in a grid so it can be personised easier and have a more real look */
     grid-template-columns:auto auto auto;/*This makes it show in a row of three*/
-    padding:0% 22% 0em;
+    padding:0% 22% 0em;/*With a 22% padding on the sides and a 0.25 % column gap */
     column-gap: 0.25%;
     row-gap: 2em;
     
@@ -83,7 +83,7 @@
         display: none;
     }
     #itemsgrid{
-        grid-template-columns:auto auto ;
+        grid-template-columns:auto auto ;/*when it gets smaller it will remove a row to look better on smaller devices */
         padding:0% 11% 0em;
         
         
@@ -103,7 +103,7 @@
         font-size: 80%;/*This sets the font at 80% when it becomes smaller*/
     }
     #itemsgrid{
-        grid-template-columns:auto ;
+        grid-template-columns:auto ;/*when it gets smaller it will remove a row to look better on smaller devices */
         padding-left: 20% ;
         
     }
