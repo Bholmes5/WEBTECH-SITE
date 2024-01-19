@@ -1,42 +1,45 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="cart.css" /> <!-- link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="cart.css" > <!-- link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the stylesheet -->
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student shop Product Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Shop Cart Page</title><!-- This adds a title to the tab/page -->
 </head>
 <body>
     <header> <!-- header bar that is going to appear at the top of the screen -->
-        <div class="logo"><img width="80%"  src="logo.svg" alt="UCLan logo" ></div>
-        <div class="Title1">Student shop</div>
-        
-        <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
-            
+        <div class="logo"><img id="logo" src="logo.svg" alt="UCLan logo" ></div>
+        <div class="title1">Student shop</div>
+        <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->   
             <ul class="desktoplistnav">
                 <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
                 <li class="desktoplist"><a href="products.html"> Products</a> </li>
                 <li class="desktoplist"><a href="cart.html"> Cart</a> </li>   
-                
             </ul>
-            
         </nav> 
-        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
+        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
     </header>
-
-    <ul class="mobilelistNav">
-        <li class="mobilelist"><a href="Home.html">Home</a></li> <!--  -->
-        <li class="mobilelist"><a href="Products.html"> Products</a> </li>
-        <li class="mobilelist"><a href="cart.html"> Cart</a> </li>   
-        
-            
+    <script>
+        function burgerfunc(){
+            var nav = document.getElementById("mobilelistNav");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else   {
+                nav.style.display = "flex";
+      }
+        }</script>
+    <ul id="mobilelistNav">
+        <li ><a class="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
+        <li ><a class="mobilelist" href="products.html"> Products</a> </li>
+        <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
     </ul>
-    <pagecontainer>
    <main>
 
 <div id ="item">
 
 </div>
+
 <script>
         var items = document.getElementById("item") 
         if (localStorage.getItem('counter')!== null){
@@ -54,13 +57,8 @@
         return localData
     }
 </script>
-
 </main>
-
-
-
     <footer>
-
         <div class="footer-grid">
             <div class="grid-item"><h1 >Links</h1>
             <p>Student Union</p>
@@ -72,8 +70,5 @@
             <p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
           </div>
     </footer>
-    
-</pagecontainer>
-
 </body>
 </html>
