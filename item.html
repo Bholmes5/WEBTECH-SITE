@@ -41,7 +41,7 @@
 
     var items = document.getElementById("item") 
     
-grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemdisc'>"+read()[2]+"</p><p id='readmore"+i+"'><a id='readmore' href='item.html'onclick=read("+i+")>Read More</a></p><p id='itemprice'>"+read()[3]+"</p><button class ='buybutton' onclick='purchase()'>Buy</button></div></div>";
+    items.innerHTML += "<div id ='hoodies'></div><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemdisc'>"+read()[2]+"</p><p id='itemprice'>"+read()[3]+"</p><button class ='buybutton' onclick=buy() >Buy</button>";
     
     
     function read(){
@@ -49,24 +49,21 @@ grid.innerHTML += "<div id = 'eachitem'><div id ='hoodies'><img id='itemimage'  
     return localData; 
     }
     
-    
-    </script>
-
-<script>
-    function buyh(){
+    function buy(){
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         counter ++;
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",JSON.parse(sessionStorage.getItem('more')) );
+        localStorage.setItem("more"+counter+"",JSON.parse(sessionStorage.getItem('more')));
         } else {
         var counter = 1 
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",JSON.parse(sessionStorage.getItem('more')));
+        localStorage.setItem("more"+counter+"",'['' JSON.parse(sessionStorage.getItem('more'))"]");
         }
         
     }
-</script>
+    </script>
+
     <footer>
         
         <div class="footer-grid">
