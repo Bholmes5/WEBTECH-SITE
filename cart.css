@@ -5,32 +5,25 @@
     column-gap: 0.25%;
     align-items: center;/*This is to align the content or text*/
     display: grid;/*This puts the items in a grid so it can be personised easier and have a more real look */
-    grid-template-columns:auto auto auto auto ;
+    grid-template-columns:auto auto auto auto ;/*This makes it show in a row of 4*/
 }
 .footer{
-    position: fixed;
-    bottom: 0;
+    position: fixed;/*this keeps the position fixed*/
+    bottom: 0;/*This keeps it at the bottom*/
 }
 #clear {
-    position:fixed;
-    right:10px;
+    position:fixed;/*this keeps the position fixed*/
+    right:10px;/*These following are to position the button and also set its size */
     top: 10%;
     width : 50px;
     height: 50px;
     border-radius: 50%;
     background: #e67239;
-    cursor: pointer;
+    cursor: pointer;/*When the pointer goes over the button it becomes a pointer*/
 }
  #itemimage{ 
         width: 100px;
     }
     #itemname{
-        font-size: 100%;
+        font-size: 100%;/*This sets the font at 100%*/
     }
-@media (max-width : 850px) {    
-  }
-  @media (max-width : 600px) {    
-  }
-  @media (min-width : 851px) {
-  }
-  
