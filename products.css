@@ -43,9 +43,9 @@
     cursor: pointer;/*When the pointer goes over the button it becomes a pointer*/
 }
 #itemsgrid{
-    align-self: center;
-    display: grid;
-    grid-template-columns:auto auto auto;
+    align-self: center;/*This is to align the content or text*/
+    display: grid;/*This puts the items in a grid so it can be personised easier and have a more real look */
+    grid-template-columns:auto auto auto;/*This makes it show in a row of three*/
     padding:0% 22% 0em;
     column-gap: 0.25%;
     row-gap: 2em;
@@ -63,11 +63,11 @@
     #itemname{
         text-align: center;/*This is to align the content or text*/
         color:orange;
-        font-size: 150%;
+        font-size: 150%;/*This sets the font at 1150%*/
     }
     #itemdisc{
         text-align: center;/*This is to align the content or text*/
-        font-size: 120%;
+        font-size: 120%;/*This sets the font at 120%*/
     }
     #readmore {
         margin-left: auto;
@@ -78,7 +78,7 @@
         align-self: center;/*This is to align the content or text*/
     }
 
-@media (max-width : 850px) {/*t*/
+@media (max-width : 850px) {/*the media tag can be used to ajust details depending on the size of the view width */
     .desktoplist{
         display: none;
     }
@@ -92,26 +92,15 @@
         margin-left: 2%;}
         
   }
-  @media (min-width : 600px) {
-   
-    
-    
-        
-  }
-@media (max-width : 600px) {
-   
-    
-    
-        
-  }
-  @media (max-width : 440px) {
+
+  @media (max-width : 440px) {/*the media tag can be used to ajust details depending on the size of the view width */
     #itemname{
         color:red;
-        font-size: 100%;
+        font-size: 100%;/*This sets the font at 100% when it becomes smaller*/
     }
     #itemdisc{
         
-        font-size: 80%;
+        font-size: 80%;/*This sets the font at 80% when it becomes smaller*/
     }
     #itemsgrid{
         grid-template-columns:auto ;
@@ -120,11 +109,11 @@
     }
     .itemnav{
         margin: 0.1em 0.1em 0.1em;
-        font-size: 0.8em;
+        font-size: 0.8em;/*This sets the font at 0.8em when it becomes smaller*/
     }
         
   }
-@media (min-width : 851px) {
+@media (min-width : 851px) {/*the media tag can be used to ajust details depending on the size of the view width */
     
 
    .mobile-menu{
