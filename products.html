@@ -114,13 +114,14 @@
 
     function buyh(i){// this is for when the buy button is clicked. it gets the i variable from being passed through
         alert("The item "+ hoodies[i][0] +" "+ hoodies[i][1] +" has been added to the cart");
-        // 
-        if (localStorage.getItem('counter')!== null){
-        counter = localStorage.getItem('counter');
+        // this displays a alert including the hoodie added
+
+        if (localStorage.getItem('counter')!== null){// this checks if there is already a counter 
+        counter = localStorage.getItem('counter');// if there is then it will add one then add the item witht the counter intergration
         counter ++;
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(hoodies[i]));
-        } else {
+        } else {//if not it will make a new counter
         var counter = 1 
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(hoodies[i]));
@@ -168,25 +169,27 @@
     ['UCLan Logo Jumper','Lighter Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (39).jpg'],
     ['UCLan Logo Jumper','Light Grey','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','jumpers/jumper (40).jpg']];
     
-    var grid = document.getElementById("itemsgrid") 
-
-    for (var i=0; i<jumpers.length;i++){
+    var grid = document.getElementById("itemsgrid") // this sets a variable as a grid 
+ 
+    for (var i=0; i<jumpers.length;i++){//this makes a loop to fill the array with the jumpers 
         grid.innerHTML += "<div id = 'eachitem'><div id ='jumpers'><img id='itemimage' width='100%' src='"+jumpers[i][4]+"'alt='"+jumpers[i][0]+"'><h1 id='itemname'>"+jumpers[i][0]+"-"+jumpers[i][1]+"</h1><p id='itemdisc'>"+jumpers[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=readj("+i+")>Read More</a></p><p id='itemprice'>"+jumpers[i][3]+"</p><button class ='buybutton' onclick='buyj("+i+")'>Buy</button></div></div>";
-    }
+    }//this gets the grid and fills it with a new div for each item calls it jumpers for the scroll to then adds the image from hoodie array point i position 4 this then continues for the rest of the line 
 
-    function readj(i){
+
+    function readj(i){// this is used for the read more it sets the session storage as the array line that it was on when clicked
         sessionStorage.setItem('more',JSON.stringify(jumpers[i]));
     }
 
-    function buyj(i){
+    function buyj(i){// this is for when the buy button is clicked. it gets the i variable from being passed through
         alert("The item "+ jumpers[i][0] +" "+ jumpers[i][1] +" has been added to the cart");
-        
-        if (localStorage.getItem('counter')!== null){
-        counter = localStorage.getItem('counter');
+         // this displays a alert including the jumper added
+
+        if (localStorage.getItem('counter')!== null){// this checks if there is already a counter
+        counter = localStorage.getItem('counter');// if there is then it will add one then add the item witht the counter intergration
         counter ++;
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(jumpers[i]));
-        } else {
+        } else {//if not it will make a new counter
         var counter = 1 
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(jumpers[i]));
@@ -229,22 +232,25 @@
     ['UCLan Logo Tshirt','Teal Blue','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','tshirts/tshirt (34).jpg'],
     ['UCLan Logo Tshirt','White','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','tshirts/tshirt (35).jpg']];
    
-    var grid = document.getElementById("itemsgrid") 
-
+    var grid = document.getElementById("itemsgrid")  // this sets a variable as a grid 
+//this makes a loop to fill the array with the tshirts 
     for (var i=0; i<tshirts.length;i++){
         grid.innerHTML += "<div id = 'eachitem'><div id ='tshirt'><img id='itemimage' width='100%' src='"+tshirts[i][4]+"'alt='"+tshirts[i][0]+"'><h1 id='itemname'>"+tshirts[i][0]+"-"+tshirts[i][1]+"</h1><p id='itemdisc'>"+tshirts[i][2]+"</p><p id='readmore"+i+"'><a href='item.html'onclick=readt("+i+")>Read More</a></p><p id='itemprice'>"+tshirts[i][3]+"</p><button class ='buybutton' onclick='buyt("+i+")'>Buy</button></div></div>";
-    }
-    function readt(i){
+    }//this gets the grid and fills it with a new div for each item calls it tshirts for the scroll to then adds the image from hoodie array point i position 4 this then continues for the rest of the line 
+
+    function readt(i){// this is used for the read more it sets the session storage as the array line that it was on when clicked
         sessionStorage.setItem('more',JSON.stringify(tshirts[i]));
     }
     function buyt(i){
         alert("The item "+ tshirts[i][0] +" "+ tshirts[i][1] +" has been added to the cart");
-        if (localStorage.getItem('counter')!== null){
-        counter = localStorage.getItem('counter');
+         // this displays a alert including the tshirt added
+
+        if (localStorage.getItem('counter')!== null){// this checks if there is already a counter
+        counter = localStorage.getItem('counter');// if there is then it will add one then add the item witht the counter intergration
         counter ++;
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(tshirts[i]));
-        } else {
+        } else {//if not it will make a new counter
         var counter = 1 
         localStorage.setItem('counter',counter);
         localStorage.setItem("more"+counter+"",JSON.stringify(tshirts[i]));
