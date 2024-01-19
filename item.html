@@ -1,76 +1,81 @@
-<!DOCTYPE html5>
-<html lang="en"></html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="itemstyle.css" /> <!-- link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="itemstyle.css" > <!-- link to the stylesheet -->
+    
+    <link rel="stylesheet" type="text/css" href="general.css" > <!-- link to the stylesheet -->
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Student Shop Home Page</title>
+   <title>Student Shop Home Page</title><!-- This adds a title to the tab/page -->
 </head>
 <body>
     <header> <!-- header bar that is going to appear at the top of the screen -->
-        <div class="logo"><img width="80%"  src="logo.svg" alt="UCLan logo" ></div>
-        <div class="Title1">Student shop</div>
+        <div class="logo"><img id="logo" src="logo.svg" alt="UCLan logo" ></div>
+        <div class="title1">Student shop</div>
         <nav> <!-- place the navigation links in a <nav> tag for accessibility purposes -->
-            
             <ul class="desktoplistnav">
                 <li class="desktoplist"><a href="mainpage.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
                 <li class="desktoplist"><a href="products.html"> Products</a> </li>
                 <li class="desktoplist"><a href="Cart.html"> Cart</a> </li>   
-                
             </ul>
         </nav> 
-        <img src ="menu.svg" class="mobile-menu" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
+        <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
     </header>
-
-
-    <ul class="mobilelistNav">
-        <li class="mobilelist"><a href="Home.html">Home</a></li> <!-- each list item contains a link (marked by the anchor tag -->
-        <li class="mobilelist"><a href="Products.html"> Products</a> </li>
-        <li class="mobilelist"><a href="Cart.html"> Cart</a> </li>   
-            
+    <script>
+         function burgerfunc(){//this is the burger menu function to make the mobile list nave show and hide when the button is clicked 
+            var nav = document.getElementById("mobilelistNav");// sets a variable as nav for the item in the html 
+            if (nav.style.display === "flex") {// this if statement checks if it is already shown or hidden then inverts
+                nav.style.display = "none";
+            } else   {
+                nav.style.display = "flex";
+      }
+        }
+    </script>
+     <ul id="mobilelistNav"><!-- This makes a un-orderd list tag for the mobile list navigation -->
+        <li ><a class="mobilelist" href="mainpage.html">Home</a></li> <!-- each list item contains a link marked by the a tag -->
+        <li ><a class="mobilelist" href="products.html"> Products</a> </li>
+        <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
     </ul>
 <main>
 
-    <div id="item">
+    <div id="item"> <!--This is here so when i add the array it has a place to go-->
        
     </div>
                 
 </main>
 <script>
-    
-
     var items = document.getElementById("item") 
-    
     items.innerHTML += "<div id ='hoodies'></div><img id='itemimage'  src='"+read()[4]+"'alt='"+read()[0]+"'><h1 id='itemname'>"+read()[0]+"-"+read()[1]+"</h1><p id='itemdisc'>"+read()[2]+"</p><p id='itemprice'>"+read()[3]+"</p><button class ='buybutton' onclick=buy() >Buy</button>";
-    
-    
-    function read(){
+    function read(){// this gets data from the session storage and displays in this order from the array when chosen
     const localData = JSON.parse(sessionStorage.getItem('more')) || [0, 0, 0, 0, 0];
     return localData; 
     }
-    
-    function buy(){
+    function buy(){// this is for when the buy button is clicked
+        alert("The item "+ read()[0] +" "+ read()[1] +" has been added to the cart");
+         // this displays a alert including the jumper added
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
         counter ++;
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",JSON.parse(sessionStorage.getItem('more')));
+        localStorage.setItem("more"+counter+"",(sessionStorage.getItem('more')));
         } else {
         var counter = 1 
         localStorage.setItem('counter',counter);
-        localStorage.setItem("more"+counter+"",'['' JSON.parse(sessionStorage.getItem('more'))"]");
+        localStorage.setItem("more"+counter+"", (sessionStorage.getItem('more')));
         }
-        
     }
     </script>
-
     <footer>
-        
-        <div class="footer-grid">
-            <div class="grid-item"><h1>Links</h1><p>Student Union</p></div>
-            <div class="grid-item"><h1>Contact</h1><p>Email:suinformation@uclan.ac.uk Phone: 01772893000</p></div>
-            <div class="grid-item"><h1>Location</h1><p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
-          </div>
+        <div class="footer-grid"><!--A grid is used for allowing better formatting of the footer-->
+            <div class="grid-item"><h1 >Links</h1>
+            <p>Student Union</p>
+            </div>
+            <div class="grid-item"><h1 >Contact</h1>
+            <p>Email:suinformation@uclan.ac.uk Phone: 01772893000</p>
+            </div>
+            <div class="grid-item"><h1 >Location</h1>
+            <p>University of Central Lancashire Student's Union Fyled Road Preston PR1 78Y Registered in England Company Number: 7923917 Registered Charity Number: 1142616</p></div>
+            </div>
     </footer>
 </body>
 </html>
