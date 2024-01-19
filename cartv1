@@ -21,9 +21,9 @@
         <img src ="menu.svg" class="mobile-menu" onclick="burgerfunc()" alt="Menu Dropdown"><!--This is the source image for the burger menu-->
     </header>
     <script>
-        function burgerfunc(){
-            var nav = document.getElementById("mobilelistNav");
-            if (nav.style.display === "flex") {
+        function burgerfunc(){//this is the burger menu function to make the mobile list nave show and hide when the button is clicked 
+            var nav = document.getElementById("mobilelistNav");// sets a variable as nav for the item in the html 
+            if (nav.style.display === "flex") {// this if statement checks if it is already shown or hidden then inverts
                 nav.style.display = "none";
             } else   {
                 nav.style.display = "flex";
@@ -35,12 +35,19 @@
         <li ><a class="mobilelist" href="cart.html"> Cart</a> </li>    
     </ul>
    <main>
+<button onclick="clear()" id="clear">
+    Clear Cart
+</button>
 
 <div id ="item">
 
 </div>
 
 <script>
+        function clear(){
+            localStorage.clear
+        }
+
         var items = document.getElementById("item") 
         if (localStorage.getItem('counter')!== null){
         counter = localStorage.getItem('counter');
@@ -59,7 +66,7 @@
 </script>
 </main>
     <footer>
-        <div class="footer-grid">
+        <div class="footer-grid"><!--A grid is used for allowing better formatting of the footer-->
             <div class="grid-item"><h1 >Links</h1>
             <p>Student Union</p>
             </div>
